@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Central Park",
+      "latitude": 40.7829,
+      "longitude": -73.9654,
+      "description": "Famous urban park in New York City",
+      "category": "park",
+      "imageUrl": "/images/central-park.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Times Square",
+      "latitude": 40.7580,
+      "longitude": -73.9855,
+      "description": "Major commercial intersection and tourist destination",
+      "category": "attraction",
+      "imageUrl": "/images/times-square.jpg"
+    }
+  ]
+}
