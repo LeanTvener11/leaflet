@@ -12,7 +12,10 @@ export default defineConfig({
       },
       output: {
         entryFileNames: '[name].js',
-        assetFileNames: '[name].[ext]',
+        assetFileNames: chunkInfo => {
+          if (chunkInfo.name === 'style.css') return 'main.css'
+          return '[name].[ext]'
+        },
         chunkFileNames: '[name].[hash].js',
       },
     },
