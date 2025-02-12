@@ -59,6 +59,10 @@ function Map() {
           {selectedLocation?.name ? selectedLocation.name : 'Udforsk Grønland'}
         </h2>
         <div className="seperator--green"></div>
+        <p>
+          Latitude: {selectedLocation && selectedLocation.latitude}°, Longitude:
+          {selectedLocation && selectedLocation.longitude}°
+        </p>
         <p>{selectedLocation && selectedLocation.description}</p>
       </div>
       <div className="map-map">
@@ -101,15 +105,7 @@ function Map() {
                 eventHandlers={{
                   click: () => handleSelectedLocation(location),
                 }}
-              >
-                <Popup>
-                  <h3>{location.name}</h3>
-                  <p>
-                    Latitude: {location.latitude}°, Longitude:
-                    {location.longitude}°
-                  </p>
-                </Popup>
-              </Marker>
+              ></Marker>
             )
           })}
         </MapContainer>
