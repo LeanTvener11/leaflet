@@ -1,22 +1,86 @@
 {
+  "StartfocusLocation": {
+    "mobile": {
+      "latitude": 76.24788,
+      "longitude": -30.099467
+    },
+    "desktop": {
+      "latitude": 75.1,
+      "longitude": -42.6032
+    }
+  },
   "locations": [
     {
       "id": 1,
-      "name": "Central Park",
-      "latitude": 40.7829,
-      "longitude": -73.9654,
-      "description": "Famous urban park in New York City",
-      "category": "park",
-      "imageUrl": "/images/central-park.jpg"
+      "name": "Station Nord",
+      "latitude": 81.6,
+      "longitude": -16.6667,
+      "description": "Militær- og videnskabelig forskningsstation i Nordøstgrønland",
+      "category": "research-station",
+      "imageUrl": "/images/station-nord.jpg"
     },
     {
       "id": 2,
-      "name": "Times Square",
-      "latitude": 40.7580,
-      "longitude": -73.9855,
-      "description": "Major commercial intersection and tourist destination",
-      "category": "attraction",
-      "imageUrl": "/images/times-square.jpg"
+      "name": "Kronprins Christian Land",
+      "latitude": 80.95,
+      "longitude": -19.1,
+      "description": "Stor halvø i Nordøstgrønland med imponerende isformationer",
+      "category": "peninsula",
+      "imageUrl": "/images/kronprins-christian-land.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Danmarks Fjord",
+      "latitude": 80.5,
+      "longitude": -22.0,
+      "description": "Langt fjordsystem der skærer ind i den grønlandske indlandsis",
+      "category": "fjord",
+      "imageUrl": "/images/danmarks-fjord.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Nordøstgrønlands Nationalpark",
+      "latitude": 76.0,
+      "longitude": -23.0,
+      "description": "Verdens største nationalpark, hjemsted for forskelligt arktisk dyreliv",
+      "category": "park",
+      "imageUrl": "/images/northeast-greenland-park.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Nioghalvfjerdsfjorden Gletsjer",
+      "latitude": 79.5,
+      "longitude": -20.0,
+      "description": "Stor udløbsgletsjer også kendt som 79° Nord Gletsjeren",
+      "category": "glacier",
+      "imageUrl": "/images/79n-glacier.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dove Bugt",
+      "latitude": 76.5,
+      "longitude": -19.5,
+      "description": "Stort bugtområde kendt for sine havisformationer",
+      "category": "bay",
+      "imageUrl": "/images/dove-bay.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Danmarkshavn",
+      "latitude": 76.7667,
+      "longitude": -18.6667,
+      "description": "Vejrstation og tidligere handelsstation",
+      "category": "station",
+      "imageUrl": "/images/danmarkshavn.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Lambert Land",
+      "latitude": 79.1333,
+      "longitude": -20.7333,
+      "description": "Kystområde med imponerende isklipper og nunatakker",
+      "category": "peninsula",
+      "imageUrl": "/images/lambert-land.jpg"
     }
   ]
 }

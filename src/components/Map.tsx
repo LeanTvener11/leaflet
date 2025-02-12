@@ -12,24 +12,69 @@ type Location = {
   description: string
 }
 
+const mobileBreakpoint = 768
 function Map() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null
   )
+
+  const handleSelectedLocation = (location: Location) => {
+    console.log(location)
+    setSelectedLocation(location)
+  }
+
   return (
     <div className="map-container">
-      <div className="map-sidebar">
-        <h2>Locations</h2>
-        <p>Click on a location to view more information</p>
-        <p>{selectedLocation && selectedLocation.name}</p>
+      <div className={`map-sidebar ${selectedLocation ? 'open' : ''}`}>
+        <div className="sidebare-close">
+          <button
+            className="sidebare-close-button"
+            onClick={() => setSelectedLocation(null)}
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <h2>
+          {selectedLocation?.name ? selectedLocation.name : 'Udforsk Grønland'}
+        </h2>
+        <div className="seperator--green"></div>
+        <p>{selectedLocation && selectedLocation.description}</p>
       </div>
       <div className="map-map">
         <MapContainer
-          center={[
-            mapData.locations[0].latitude,
-            mapData.locations[0].longitude,
-          ]}
-          zoom={13}
+          center={
+            window.innerWidth <= mobileBreakpoint
+              ? [
+                  mapData.StartfocusLocation.mobile.latitude,
+                  mapData.StartfocusLocation.mobile.longitude,
+                ] // More zoomed in center for mobile
+              : [
+                  mapData.StartfocusLocation.desktop.latitude,
+                  mapData.StartfocusLocation.desktop.longitude,
+                ]
+          }
+          zoom={window.innerWidth <= mobileBreakpoint ? 3 : 4}
           style={{ height: '100%', width: '100%' }}
           scrollWheelZoom={false}
         >
@@ -53,13 +98,16 @@ function Map() {
                 icon={customIcon}
                 key={location.id}
                 position={[location.latitude, location.longitude]}
+                eventHandlers={{
+                  click: () => handleSelectedLocation(location),
+                }}
               >
                 <Popup>
                   <h3>{location.name}</h3>
-                  <p>{location.description}</p>
-                  <button onClick={() => setSelectedLocation(location)}>
-                    Læs mere
-                  </button>
+                  <p>
+                    Latitude: {location.latitude}°, Longitude:
+                    {location.longitude}°
+                  </p>
                 </Popup>
               </Marker>
             )
