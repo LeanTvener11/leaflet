@@ -5,7 +5,7 @@ import mapData from './mapData.json'
 function Map() {
   return (
     <MapContainer
-      center={[51.505, -0.09]}
+      center={[mapData.locations[0].latitude, mapData.locations[0].longitude]}
       zoom={13}
       style={{ height: '100%', width: '100%' }}
     >
