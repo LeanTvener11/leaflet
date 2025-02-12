@@ -4,14 +4,24 @@ import mapData from './mapData.json'
 import { useState } from 'react'
 import { DivIcon } from 'leaflet'
 
+type Location = {
+  id: number
+  name: string
+  latitude: number
+  longitude: number
+  description: string
+}
+
 function Map() {
-  const [selectedLocation, setSelectedLocation] = useState(null)
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
+    null
+  )
   return (
     <div className="map-container">
       <div className="map-sidebar">
         <h2>Locations</h2>
         <p>Click on a location to view more information</p>
-        <p> {selectedLocation?.name}</p>
+        <p>{selectedLocation && selectedLocation.name}</p>
       </div>
       <div className="map-map">
         <MapContainer
