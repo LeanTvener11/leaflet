@@ -51,12 +51,16 @@
 
 .accordian-headline {
   color: var(--blue);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.3rem;
   font-family: verdana, geneva, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
 
 .accordian-item-button {

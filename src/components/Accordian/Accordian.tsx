@@ -5,8 +5,8 @@ const Accordian = ({
   setSelected,
   locations,
 }: {
-  selected: Location
-  setSelected: (selected: Location) => void
+  selected: Location | null
+  setSelected: (selected: Location | null) => void
   locations: Location[]
 }) => {
   const handleAccordianClick = (location: Location) => {
@@ -20,7 +20,7 @@ const Accordian = ({
           <li className="accordian-item" key={location.id}>
             <div
               className={`accordian-item-container ${
-                selected.id === location.id ? 'active' : ''
+                selected?.id === location.id ? 'active' : ''
               }`}
             >
               <button
@@ -36,9 +36,9 @@ const Accordian = ({
               </button>
               <div
                 className={`content-container ${
-                  selected.id === location.id ? 'active' : ''
+                  selected?.id === location.id ? 'active' : ''
                 }`}
-                aria-hidden={selected.id !== location.id}
+                aria-hidden={selected?.id !== location.id}
               >
                 <div className="content-container-inner">
                   <p>
