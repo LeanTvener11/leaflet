@@ -1,4 +1,4 @@
-import { Location } from './Map'
+import { Location } from '../Map'
 
 const Accordian = ({
   selected,

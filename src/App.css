@@ -1,6 +1,5 @@
 @import './index.css';
-@import './components/Accordian.css';
-
+@import './components/Accordian/accordian.css';
 #root {
   max-width: 1280px;
   margin: 0 auto;

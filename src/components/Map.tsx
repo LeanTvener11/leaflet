@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css'
 import mapData from './mapData.json'
 import { useState } from 'react'
 import { DivIcon } from 'leaflet'
-import Accordian from './Accordian'
+import Accordian from './Accordian/Accordian'
 
 export type Location = {
   id: number
