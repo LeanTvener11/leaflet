@@ -12,27 +12,36 @@
 
 .map-container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
   height: 100%;
 }
 
 .map-sidebar {
-  width: 60%;
-  height: 85%;
-  overflow: hidden;
-  padding: 20px;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: white;
   padding: 20px;
-  margin: 20px;
+  margin: 1rem;
   padding-top: 60px;
   transition: transform 0.3s ease-out;
   position: fixed;
-  top: 0;
-  right: 0;
+  width: 100%;
   z-index: 1000;
-  padding: 2rem;
+  padding: 1rem;
   @media (min-width: 768px) {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    margin-right: 2rem;
+    padding: 2rem;
     width: 40%;
+    height: 85%;
   }
 }
 
@@ -54,6 +63,12 @@
   line-height: 1.5;
   letter-spacing: -0.5px;
   line-break: loose;
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    line-break: loose;
+  }
 }
 
 .map-map {
@@ -71,7 +86,14 @@
 }
 
 .map-sidebar p {
-  margin-bottom: 10px;
+  margin-bottom: 1em;
+  font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 1em;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    line-break: loose;
+  }
 }
 
 .custom-icon {

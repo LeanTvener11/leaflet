@@ -39,12 +39,27 @@ const Accordian = ({
                   selected.id === location.id ? 'active' : ''
                 }`}
                 aria-hidden={selected.id !== location.id}
-                role=""
-                aria-labelledby=""
               >
                 <div className="content-container-inner">
+                  <p>
+                    {location.latitude}° {location.longitude}°
+                  </p>
                   <p>{location.description}</p>
-                  <div className=""></div>
+                  <div className="image-container">
+                    {location.videoUrl ? (
+                      <video
+                        controls
+                        className="image-container-video"
+                        src={location.videoUrl}
+                        muted
+                        playsInline
+                      >
+                        <source src={location.videoUrl} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img src={location.imageUrl} alt={location.name} />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

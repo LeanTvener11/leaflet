@@ -11,6 +11,9 @@ export type Location = {
   latitude: number
   longitude: number
   description: string
+  imageUrl?: string
+  videoUrl?: string
+  altText?: string
 }
 
 function Map() {

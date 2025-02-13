@@ -17,7 +17,8 @@
       "longitude": -16.6667,
       "description": "Militær- og videnskabelig forskningsstation i Nordøstgrønland",
       "category": "research-station",
-      "imageUrl": "/images/station-nord.jpg"
+      "imageUrl": "/images/station-nord.jpg",
+      "videoUrl": "https://vimeo.com/6fe71092-0118-497e-9721-0b9de9d5dbfa"
     },
     {
       "id": 2,
