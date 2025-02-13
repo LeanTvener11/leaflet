@@ -1,7 +1,54 @@
 .accordian-item {
   list-style: none;
-  margin: 1rem 0;
 }
+
+.accordian-item-container {
+  position: relative;
+  padding: 24px 24px 24px 32px;
+}
+
+.accordian-item:not(:first-child) {
+  margin-top: 0rem !important;
+}
+
+.accordian-item:not(:last-child)::after {
+  display: none;
+}
+
+.accordian-item-container::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 37px;
+  left: -4px;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+}
+.accordian-item-container::after {
+  content: '';
+  width: 3px;
+  display: inline-block;
+  position: absolute;
+  top: 37px;
+  left: -1px;
+  z-index: 1;
+  height: 100%;
+  background-color: #dddddd;
+  z-index: 5;
+}
+.accordian-item-container.active::before {
+  background-color: var(--red);
+}
+
+.accordian-item:last-child .accordian-item-container::after {
+  display: none;
+}
+
 .accordian-headline {
   color: var(--blue);
   font-size: 1.5rem;
@@ -45,4 +92,8 @@
 
 .accordian-item:not(:first-child) {
   margin-top: 1rem;
+}
+
+.accordian-item:last-child .accordian-item-container::after {
+  display: none;
 }

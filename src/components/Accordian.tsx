@@ -17,8 +17,12 @@ const Accordian = ({
     <div aria-label="Accordian">
       <ul className="">
         {locations.map(location => (
-          <li className="accordian-item" key={location.id} className="">
-            <div className="">
+          <li className="accordian-item" key={location.id}>
+            <div
+              className={`accordian-item-container ${
+                selected.id === location.id ? 'active' : ''
+              }`}
+            >
               <button
                 className="accordian-item-button"
                 onClick={() => handleAccordianClick(location)}
