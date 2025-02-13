@@ -23,6 +23,13 @@ function App() {
         zoom={window.innerWidth <= mobileBreakpoint ? 3 : 5}
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
+        dragging={false}
+        zoomControl={false}
+        doubleClickZoom={false}
+        keyboard={false}
+        touchZoom={false}
+        boxZoom={false}
+        closePopupOnClick={false}
       >
         <Map />
       </MapContainer>

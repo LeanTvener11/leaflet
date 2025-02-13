@@ -106,7 +106,7 @@ function Map() {
         <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
 
         <div className="seperator--green"></div>
-
+          
         <Accordian
           selected={selectedLocation}
           setSelected={handleLocationClick}

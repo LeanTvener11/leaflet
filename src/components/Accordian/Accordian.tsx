@@ -14,7 +14,7 @@ const Accordian = ({
   }
 
   return (
-    <div aria-label="Accordian">
+    <div aria-label="Accordian" className="accordian">
       <ul className="">
         {locations.map(location => (
           <li className="accordian-item" key={location.id}>

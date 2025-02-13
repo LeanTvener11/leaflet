@@ -1,3 +1,8 @@
+.accordian {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
 .accordian-item {
   list-style: none;
 }
