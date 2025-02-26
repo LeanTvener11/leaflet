@@ -120,6 +120,25 @@
   }
 }
 
+.map-sidebar-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  @media (min-width: 768px) {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+.map-sidebar-toggle.isOpen {
+  transform: rotate(180deg);
+}
+
 .custom-icon {
   width: 28px;
   height: 28px;

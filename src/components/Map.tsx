@@ -90,16 +90,8 @@ function Map() {
     >
       <div className={`map-sidebar ${isOpen ? '' : 'inactive'}`}>
         <button
+          className={`map-sidebar-toggle ${isOpen ? 'isOpen' : ''}`}
           onClick={toggleContent}
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            right: '1rem',
-            background: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            padding: '0.5rem',
-          }}
         >
           <svg
             width="24"
@@ -111,8 +103,7 @@ function Map() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
         <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
