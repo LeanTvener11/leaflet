@@ -50,7 +50,7 @@ function Map() {
         zoomLevel,
         {
           animate: true,
-          duration: 1,
+          duration: 3,
         }
       )
       setSelectedLocation(null)
@@ -76,7 +76,7 @@ function Map() {
 
     map.setView([adjustedLat, adjustedLng], zoomLevel, {
       animate: true,
-      duration: 1,
+      duration: 3,
     })
     setSelectedLocation(location)
     setIsOpen(true)

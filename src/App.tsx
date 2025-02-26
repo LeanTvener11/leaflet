@@ -7,7 +7,13 @@ const mobileBreakpoint = 768
 
 function App() {
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div
+      style={{
+        height: '100vh',
+        width: '100%',
+        display: 'relative',
+      }}
+    >
       <MapContainer
         center={
           window.innerWidth <= mobileBreakpoint
