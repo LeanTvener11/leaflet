@@ -1,6 +1,10 @@
 .accordian {
   max-height: 100%;
   overflow-y: scroll;
+  ul {
+    margin-left: 0;
+    padding-left: 10px;
+  }
 }
 
 .accordian-item {

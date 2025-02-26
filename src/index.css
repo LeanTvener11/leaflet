@@ -23,22 +23,22 @@
 
 .map-sidebar {
   overflow-x: hidden;
-
+  padding: 12px;
   height: 50%;
   max-width: calc(100% - 4rem);
   bottom: 0;
   overflow-y: hidden;
   background-color: white;
-  padding: 20px;
-  padding-top: 60px;
+  padding-top: 40px;
   transition: all 0.3s ease-out;
   position: fixed;
   width: 90%;
   z-index: 1000;
-  padding: 1rem;
   left: 50%;
   transform: translateX(-50%);
   @media (min-width: 768px) {
+    padding-top: 60px;
+    padding: 1rem;
     left: calc(100% - 20px);
     transform: translateX(-100%);
     top: 20px;
@@ -60,12 +60,11 @@
 }
 
 .map-sidebar-content.show {
-  height: auto;
+  height: 100%;
   z-index: -1;
 }
 .map-sidebar-content {
   transition: all 0.3s ease-out;
-  overflow-y: scroll;
   height: 0;
 }
 
@@ -141,5 +140,5 @@
 .seperator--green {
   width: 100%;
   border: 5px solid #3f5b58;
-  background-color: #3f5b58;
+  box-sizing: border-box;
 }
