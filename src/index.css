@@ -11,6 +11,8 @@
 }
 
 .map-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
@@ -20,6 +22,8 @@
 }
 
 .map-sidebar {
+  overflow-x: hidden;
+
   height: 50%;
   max-width: calc(100% - 4rem);
   bottom: 0;
@@ -27,23 +31,42 @@
   background-color: white;
   padding: 20px;
   padding-top: 60px;
-  transition: transform 0.3s ease-out;
+  transition: all 0.3s ease-out;
   position: fixed;
   width: 90%;
   z-index: 1000;
   padding: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform 0.3s ease-out;
   @media (min-width: 768px) {
-    top: 50%;
-    transform: translateY(-50%);
+    left: calc(100% - 20px);
+    transform: translateX(-100%);
+    top: 20px;
+    right: 20px;
+    max-height: calc(100% - 40px);
     margin: 0;
     margin-right: 2rem;
     padding: 2rem;
     width: 40%;
     height: 85%;
   }
+}
+
+.map-sidebar.inactive {
+  height: 75px;
+  @media (min-width: 768px) {
+    height: 100px;
+  }
+}
+
+.map-sidebar-content.show {
+  height: auto;
+  z-index: -1;
+}
+.map-sidebar-content {
+  transition: all 0.3s ease-out;
+  overflow-y: scroll;
+  height: 0;
 }
 
 .map-sidebar-title {

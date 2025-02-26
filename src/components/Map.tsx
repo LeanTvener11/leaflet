@@ -20,7 +20,18 @@ function Map() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null
   )
+  const [isOpen, setIsOpen] = useState(false)
   const map = useMap()
+
+  const toggleContent = () => {
+    setIsOpen(prev => {
+      if (prev) {
+        setSelectedLocation(null)
+        handleLocationClick(null)
+      }
+      return !prev
+    })
+  }
 
   const handleLocationClick = (location: Location | null) => {
     if (location == null) {
@@ -47,7 +58,7 @@ function Map() {
     }
 
     const isMobile = window.innerWidth < 768
-    const zoomLevel = isMobile ? 7 : 6
+    const zoomLevel = isMobile ? 7 : 7
 
     // Calculate offset based on zoom level
     // Higher zoom levels need smaller coordinate adjustments
@@ -68,6 +79,7 @@ function Map() {
       duration: 1,
     })
     setSelectedLocation(location)
+    setIsOpen(true)
   }
 
   return (
@@ -76,9 +88,9 @@ function Map() {
         selectedLocation ? 'has-selected-location' : ''
       }`}
     >
-      <div className={`map-sidebar ${selectedLocation ? 'active' : ''}`}>
+      <div className={`map-sidebar ${isOpen ? '' : 'inactive'}`}>
         <button
-          onClick={() => handleLocationClick(null)}
+          onClick={toggleContent}
           style={{
             position: 'absolute',
             top: '1rem',
@@ -106,12 +118,13 @@ function Map() {
         <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
 
         <div className="seperator--green"></div>
-          
-        <Accordian
-          selected={selectedLocation}
-          setSelected={handleLocationClick}
-          locations={mapData.locations}
-        />
+        <div className={`map-sidebar-content ${isOpen ? 'show' : ''}`}>
+          <Accordian
+            selected={selectedLocation}
+            setSelected={handleLocationClick}
+            locations={mapData.locations}
+          />
+        </div>
       </div>
       <div
         className={`map-map ${selectedLocation ? 'has-selected-location' : ''}`}

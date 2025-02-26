@@ -20,7 +20,7 @@ function App() {
                 mapData.StartfocusLocation.desktop.longitude,
               ]
         }
-        zoom={window.innerWidth <= mobileBreakpoint ? 3 : 5}
+        zoom={window.innerWidth <= mobileBreakpoint ? 4 : 4}
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
         dragging={false}

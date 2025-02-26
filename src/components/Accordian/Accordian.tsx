@@ -22,6 +22,7 @@ const Accordian = ({
               className={`accordian-item-container ${
                 selected?.id === location.id ? 'active' : ''
               }`}
+              aria-hidden={selected?.id !== location.id}
             >
               <button
                 className="accordian-item-button"
