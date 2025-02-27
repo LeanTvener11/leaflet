@@ -98,18 +98,23 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   background-color: var(--backgroundGrey);
-  font-size: 1.4rem;
   line-height: 1.6;
   box-sizing: border-box;
   line-break: loose;
   margin-bottom: 1rem;
+  font-size: 14px;
   @media (min-width: 768px) {
+    font-size: 1rem;
     margin-bottom: 2rem;
   }
 }
 
 .content-container-inner {
   padding: 1rem;
+}
+.content-container-inner p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .content-container.active {

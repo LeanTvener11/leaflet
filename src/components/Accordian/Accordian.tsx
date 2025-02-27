@@ -48,15 +48,25 @@ const Accordian = ({
                   <p>{location.description}</p>
                   <div className="image-container">
                     {location.videoUrl ? (
-                      <video
-                        controls
-                        className="image-container-video"
-                        src={location.videoUrl}
-                        muted
-                        playsInline
+                      <div
+                        style={{
+                          paddingTop: '56.25%',
+                          position: 'relative',
+                        }}
                       >
-                        <source src={location.videoUrl} type="video/mp4" />
-                      </video>
+                        <iframe
+                          src={`https://player.vimeo.com/video/${location.videoUrl}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1`}
+                          allow="autoplay; fullscreen; clipboard-write; encrypted-media"
+                          allowFullScreen
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                          }}
+                        ></iframe>
+                      </div>
                     ) : (
                       <img src={location.imageUrl} alt={location.name} />
                     )}
