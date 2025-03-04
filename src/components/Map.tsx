@@ -108,7 +108,7 @@ function Map() {
         </button>
         <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
 
-        <div className="seperator--green"></div>
+        <div className="seperator-grey"></div>
         <div className={`map-sidebar-content ${isOpen ? 'show' : ''}`}>
           <Accordian
             selected={selectedLocation}

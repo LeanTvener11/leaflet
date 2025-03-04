@@ -91,6 +91,7 @@
   border: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .content-container {
