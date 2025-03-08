@@ -42,7 +42,7 @@ function Map() {
   const handleLocationClick = (location: Location | null) => {
     if (location == null) {
       const isMobile = window.innerWidth < 768
-      const zoomLevel = isMobile ? 4 : 4
+      const zoomLevel = isMobile ? 3 : 4
 
       map.setView(
         [
@@ -64,7 +64,7 @@ function Map() {
     }
 
     const isMobile = window.innerWidth < 768
-    const zoomLevel = isMobile ? 7 : 7
+    const zoomLevel = isMobile ? 3 : 7
 
     // Calculate offset based on zoom level
     // Higher zoom levels need smaller coordinate adjustments
