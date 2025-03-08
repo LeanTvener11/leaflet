@@ -70,8 +70,8 @@ function Map() {
 
     // Calculate offset based on zoom level
     // Higher zoom levels need smaller coordinate adjustments
-    const latOffset = 0.3 // Adjust base value as needed
-    const lngOffset = -6 // Adjust base value as needed
+    const latOffset = 1 // Adjust base value as needed
+    const lngOffset = -3 // Adjust base value as needed
 
     let adjustedLat = location.latitude
     let adjustedLng = location.longitude

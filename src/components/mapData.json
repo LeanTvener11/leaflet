@@ -10,9 +10,9 @@
     }
   },
   "mobileZoom": 3,
-  "desktopZoom": 5,
+  "desktopZoom": 4,
   "mobileLocationZoom": 6,
-  "desktopLocationZoom": 7,
+  "desktopLocationZoom": 73,
   "locations": [
     {
       "id": 1,
