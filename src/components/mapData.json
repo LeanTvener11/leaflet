@@ -9,6 +9,10 @@
       "longitude": -18.6032
     }
   },
+  "mobileZoom": 2,
+  "desktopZoom": 4,
+  "mobileLocationZoom": 6,
+  "desktopLocationZoom": 7,
   "locations": [
     {
       "id": 1,
