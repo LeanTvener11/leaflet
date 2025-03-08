@@ -42,9 +42,6 @@ const Accordian = ({
                 aria-hidden={selected?.id !== location.id}
               >
                 <div className="content-container-inner">
-                  <p>
-                    {location.latitude}° {location.longitude}°
-                  </p>
                   <p>{location.description}</p>
                   <div className="image-container">
                     {location.videoUrl ? (

@@ -30,10 +30,11 @@ function App() {
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
         dragging={false}
-        zoomControl={false}
+        minZoom={3}
+        maxZoom={7}
         doubleClickZoom={false}
         keyboard={false}
-        touchZoom={false}
+        touchZoom={true}
         boxZoom={false}
         closePopupOnClick={false}
       >

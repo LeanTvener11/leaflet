@@ -16,6 +16,12 @@ export type Location = {
   altText?: string
 }
 
+const pinIcon =
+  '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0"><path fill="#c8102e" d="m75.469 21.719c-5.3125-9.1875-14.844-14.688-25.469-14.688-16.25 0-29.469 13.219-29.469 29.469 0 5.1562 1.3438 10.094 3.9688 14.688l23.469 40.625c0.40625 0.71875 1.1875 1.1875 2.0312 1.1875s1.625-0.4375 2.0312-1.1875l23.469-40.625c5.3125-9.2188 5.2812-20.219-0.03125-29.438zm-4.0312 27.094-21.438 37.094-21.438-37.094c-2.2188-3.875-3.3438-8.0312-3.3438-12.344 0-13.656 11.125-24.781 24.781-24.781 8.9375 0 16.938 4.625 21.406 12.344 4.4688 7.75 4.5 17 0 24.75zm-21.438-28.219c-8.375 0-15.156 6.8125-15.156 15.219s6.8125 15.156 15.156 15.156 15.156-6.8125 15.156-15.156-6.8125-15.219-15.156-15.219zm0 25.688c-5.7812 0-10.469-4.6875-10.469-10.469s4.6875-10.531 10.469-10.531 10.469 4.7188 10.469 10.531-4.6875 10.469-10.469 10.469z"/></svg>'
+
+const pinSelectedIcon =
+  '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 254 470" x="0px" y="0px" fill-rule="evenodd"  clip-rule="evenodd"><g><path fill="#c8102e" d="M127 0c70,0 127,57 127,127 0,62 -32,96 -66,151l-61 98 -61 -98c-34,-55 -66,-89 -66,-151 0,-70 57,-127 127,-127zm0 52c39,0 70,32 70,70 0,39 -31,70 -70,70 -39,0 -70,-31 -70,-70 0,-38 31,-70 70,-70z"/></g>   </svg>'
+
 function Map() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null
@@ -126,9 +132,19 @@ function Map() {
         />
         {mapData.locations.map(location => {
           const customIcon = new DivIcon({
-            html: `<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                     <circle cx="16" cy="16" r="16" fill="currentColor" />
-                   </svg>`,
+            html: `<div class="custom-icon-container">
+                ${
+                  selectedLocation?.id === location.id
+                    ? pinSelectedIcon
+                    : pinIcon
+                }
+                    <div class="pin-text">
+                      <p>${location.name}</p>
+                      <p>(${location.latitude.toFixed(
+                        2
+                      )},  ${location.longitude.toFixed(2)})</p>
+                    </div>
+                  </div>`,
             className: `custom-icon ${
               selectedLocation?.id === location.id ? ' active' : ''
             }`,
