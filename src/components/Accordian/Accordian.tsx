@@ -1,4 +1,5 @@
 import { Location } from '../Map'
+import { useEffect, useRef } from 'react'
 
 const Accordian = ({
   selected,
@@ -9,15 +10,32 @@ const Accordian = ({
   setSelected: (selected: Location | null) => void
   locations: Location[]
 }) => {
+  const accordianRef = useRef<HTMLDivElement>(null)
+
   const handleAccordianClick = (location: Location) => {
     setSelected(location)
   }
 
+  useEffect(() => {
+    if (selected && accordianRef.current) {
+      const selectedElement = accordianRef.current.querySelector(
+        `[location-id="${selected.id}"]`
+      )
+      if (selectedElement) {
+        selectedElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [selected])
+
   return (
-    <div aria-label="Accordian" className="accordian">
-      <ul className="">
+    <div aria-label="Accordian" className="accordian" ref={accordianRef}>
+      <ul>
         {locations.map(location => (
-          <li className="accordian-item" key={location.id}>
+          <li
+            className="accordian-item"
+            key={location.id}
+            location-id={location.id}
+          >
             <div
               className={`accordian-item-container ${
                 selected?.id === location.id ? 'active' : ''

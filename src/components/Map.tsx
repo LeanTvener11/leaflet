@@ -23,6 +23,7 @@ const pinSelectedIcon =
   '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 254 470" x="0px" y="0px" fill-rule="evenodd"  clip-rule="evenodd"><g><path fill="#c8102e" d="M127 0c70,0 127,57 127,127 0,62 -32,96 -66,151l-61 98 -61 -98c-34,-55 -66,-89 -66,-151 0,-70 57,-127 127,-127zm0 52c39,0 70,32 70,70 0,39 -31,70 -70,70 -39,0 -70,-31 -70,-70 0,-38 31,-70 70,-70z"/></g>   </svg>'
 
 function Map() {
+  const isMobile = window.innerWidth < 768
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null
   )
@@ -63,7 +64,6 @@ function Map() {
       return
     }
 
-    const isMobile = window.innerWidth < 768
     const zoomLevel = isMobile
       ? mapData.mobileLocationZoom
       : mapData.desktopLocationZoom
@@ -97,26 +97,28 @@ function Map() {
       }`}
     >
       <div className={`map-sidebar ${isOpen ? '' : 'inactive'}`}>
-        <button
-          className={`map-sidebar-toggle ${isOpen ? 'isOpen' : ''}`}
-          onClick={toggleContent}
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        <div className="map-sidebar-header">
+          <button
+            className={`map-sidebar-toggle ${isOpen ? 'isOpen' : ''}`}
+            onClick={toggleContent}
           >
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </button>
-        <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <h2 className="map-sidebar-title">{'Udforsk Grønland'}</h2>
 
-        <div className="seperator-grey"></div>
+          <div className="seperator-grey"></div>
+        </div>
         <div className={`map-sidebar-content ${isOpen ? 'show' : ''}`}>
           <Accordian
             selected={selectedLocation}
@@ -150,7 +152,7 @@ function Map() {
             className: `custom-icon ${
               selectedLocation?.id === location.id ? ' active' : ''
             }`,
-            iconSize: [32, 32],
+            iconSize: isMobile ? [32, 32] : [48, 48],
           })
 
           return (
