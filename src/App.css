@@ -1,5 +1,6 @@
 @import './index.css';
 @import './components/Accordian/accordian.css';
+@import './components/Carousel/Carousel.css';
 #root {
   max-width: 1280px;
   margin: 0 auto;

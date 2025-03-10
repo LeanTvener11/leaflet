@@ -14,6 +14,7 @@ const bounds = new LatLngBounds(
   // Northeast corner (top-right)
   [85, 60]
 )
+const isMobile = window.innerWidth < 768
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
         }
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
-        dragging={true} // Enable dragging
+        dragging={!isMobile} // Enable dragging
         minZoom={2}
         maxZoom={7}
         doubleClickZoom={false}

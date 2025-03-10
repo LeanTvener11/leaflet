@@ -1,5 +1,6 @@
 import { Location } from '../Map'
 import { useEffect, useRef } from 'react'
+import Carousel from '../Carousel/Carousel'
 
 const Accordian = ({
   selected,
@@ -61,31 +62,47 @@ const Accordian = ({
               >
                 <div className="content-container-inner">
                   <p>{location.description}</p>
-                  <div className="image-container">
-                    {location.videoUrl ? (
+                  {location.media.length === 1 && (
+                    <div className="image-container">
                       <div
                         style={{
                           paddingTop: '56.25%',
                           position: 'relative',
                         }}
                       >
-                        <iframe
-                          src={`https://player.vimeo.com/video/${location.videoUrl}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1`}
-                          allow="autoplay; fullscreen; clipboard-write; encrypted-media"
-                          allowFullScreen
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                          }}
-                        ></iframe>
+                        {location.media[0].type === 'video' ? (
+                          <iframe
+                            src={`https://player.vimeo.com/video/${location.media[0].url}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1`}
+                            allow="autoplay; fullscreen; clipboard-write; encrypted-media"
+                            allowFullScreen
+                            style={{
+                              position: 'absolute',
+                              top: 0,
+                              left: 0,
+                              width: '100%',
+                              height: '100%',
+                            }}
+                          ></iframe>
+                        ) : (
+                          <img
+                            style={{
+                              position: 'absolute',
+                              top: 0,
+                              left: 0,
+                              width: '100%',
+                              height: '100%',
+                            }}
+                            className="carousel-image"
+                            src={location.media[0].url}
+                            alt={location.name}
+                          />
+                        )}
                       </div>
-                    ) : (
-                      <img src={location.imageUrl} alt={location.name} />
-                    )}
-                  </div>
+                    </div>
+                  )}
+                  {location.media.length > 1 && (
+                    <Carousel media={location.media} title={location.name} />
+                  )}
                 </div>
               </div>
             </div>

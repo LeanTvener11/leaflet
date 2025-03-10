@@ -11,9 +11,12 @@ export type Location = {
   latitude: number
   longitude: number
   description: string
-  imageUrl?: string
-  videoUrl?: string
-  altText?: string
+  media: MediaItem[]
+}
+
+export type MediaItem = {
+  type: 'image' | 'video'
+  url: string
 }
 
 const pinIcon =
@@ -123,7 +126,7 @@ function Map() {
           <Accordian
             selected={selectedLocation}
             setSelected={handleLocationClick}
-            locations={mapData.locations}
+            locations={mapData.locations as Location[]}
           />
         </div>
       </div>
@@ -143,10 +146,10 @@ function Map() {
                     : pinIcon
                 }
                     <div class="pin-text">
-                      <p>${location.name}</p>
-                      <p>(${location.latitude.toFixed(
+                      <p class="pin-text-name">${location.name}</p>
+                      <p class="pin-text-coordinates">${location.latitude.toFixed(
                         2
-                      )},  ${location.longitude.toFixed(2)})</p>
+                      )},  ${location.longitude.toFixed(2)}</p>
                     </div>
                   </div>`,
             className: `custom-icon ${
@@ -161,7 +164,7 @@ function Map() {
               key={location.id}
               position={[location.latitude, location.longitude]}
               eventHandlers={{
-                click: () => handleLocationClick(location),
+                click: () => handleLocationClick(location as Location),
               }}
             ></Marker>
           )

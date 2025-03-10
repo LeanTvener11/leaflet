@@ -20,8 +20,16 @@
       "latitude": 80.58,
       "longitude": -62.35,
       "description": "I ukendt terræn skal et patruljehold rekognoscere en gletsjer, der aldrig før er blevet passeret med hundeslæde – en risikabel opgave, da revner i isen kan være dækket af sne. Den stejle opstigning kræver, at de fragter lasten ad to omgange. Men på toppen breder en endeløs isørken sig, hvid så langt øjet rækker og et syn udover det sædvanlige.",
-      "imageUrl": "/images/station-nord.jpg",
-      "videoUrl": "1047397301"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/washingtonImage1.webp"
+        },
+        {
+          "type": "video",
+          "url": "1047397301"
+        }
+      ]
     },
     {
       "id": 8,
@@ -30,7 +38,16 @@
       "longitude": -49.56,
       "description": "Når lyset vender tilbage i den sene vinter, muliggør det indsættelse af slædehold til Nordøstgrønlands fjerneste egne med specialfly, der kan lande og lette på ski. Pladsen er trang, når hundeslæde, tretten hunde og to mand skal med grej til at kunne begå sig i flere måneder i det øde.",
       "category": "peninsula",
-      "imageUrl": "/images/lambert-land.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/udflyvning1.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/udflyvning2.webp"
+        }
+      ]
     },
 
     {
@@ -39,7 +56,32 @@
       "latitude": 82.33,
       "longitude": -33.56,
       "description": "En frostklar morgen i Nordterrænet møder et slædehold et kobbel på elve ulve, som nysgerrigt følger slæden indtil deres opmærksomhed rettes mod en flok moskusokser i det fjerne. Ulvene omringer flokken og en kalv bliver let bytte idet panikken spreder sig. Mens ulvene jager, fortsætter slædeholdet hurtigt videre gennem den øde vildmark.​",
-      "imageUrl": "/images/lambert-land.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/tvillum1.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/tvillum2.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/tvillum3.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/tvillum4.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/tvillum5.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/tvillum6.webp"
+        }
+      ]
     },
     {
       "id": 3,
@@ -47,7 +89,16 @@
       "latitude": 81.15,
       "longitude": -24.48,
       "description": "Langt inde i en stenet og snæver canyon gemmer sig et 25 meter højt, lodret vandfald, som i maj måned er frosset til is. Ved hjælp af medbragt udstyr hejses slæden ned ad vandfaldet, mens hundene og patruljeførerne selv bevæger sig over klippevæggen og rundt om vandfaldet.",
-      "imageUrl": "/images/danmarks-fjord.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/nedfiring1.webp"
+        },
+        {
+          "type": "image",
+          "url": "/images/nedfiring2.webp"
+        }
+      ]
     },
     {
       "id": 4,
@@ -56,7 +107,12 @@
       "longitude": -19.34,
       "description": "En frostklar nat trænger et skær gennem teltdugen og vækker patruljeførerne. Udenfor danser nordlyset over himlen i grønne og lilla bånd, som flammer i vinden. Det ændrer sig uforudsigeligt, mens stilheden kun brydes af deres åndedræt og hundenes rolige bevægelser. Idet de falder i søvn igen, danser nordlysets stadig bag nethinden.",
       "category": "park",
-      "imageUrl": "/images/northeast-greenland-park.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/nordlys.webp"
+        }
+      ]
     },
     {
       "id": 2,
@@ -64,8 +120,12 @@
       "latitude": 78.05,
       "longitude": -19.53,
       "description": "Isbjerge driver ud og ind af Nordøstgrønlands fjorde i de få isfrie måneder, men i Jøkelbugten holdes de tilbage, hvilket skaber en tæt is-labyrint. Ved dårlig sigtbarhed er navigation næsten umulig, da isbjergene hverken fremgår på GPS eller kort.",
-
-      "imageUrl": "/images/kronprins-christian-land.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/isbjergeJoekelbugten.webp"
+        }
+      ]
     },
     {
       "id": 6,
@@ -74,7 +134,12 @@
       "longitude": -19.48,
       "description": "Under sommerens patruljering bruger Siriuspatruljen deres egne patruljefartøjer. Drivisen danner tætte labyrinter, der ændrer sig konstant, hvilket kræver forsigtighed for at undgå at skrog og propeller beskadiges.",
       "category": "bay",
-      "imageUrl": "/images/dove-bay.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/sejlads.webp"
+        }
+      ]
     },
     {
       "id": 5,
@@ -83,7 +148,12 @@
       "longitude": -18.47,
       "description": "Under en søopmåling opdages et skibsvrag i Hansa Bugt, der sandsynligvis er det tyske skib Sachsen, der deltog i 2. verdenskrig med vejrmålinger over Nordøstgrønland. Efter at tyskerne blev opdaget af Slædepatruljen og deres hytter blev ødelagt af amerikanske bombefly i 1943, blev de evakueret. Men før de forlod området, borede de huller i skroget, så skibet sank, da isen smeltede.",
       "category": "glacier",
-      "imageUrl": "/images/79n-glacier.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/sachsen.webp"
+        }
+      ]
     },
 
     {
@@ -93,7 +163,12 @@
       "longitude": -25.3,
       "description": "En kold marts-morgen bevæger to patruljeførere sig ud på tynd is. Efter at have kontrolleret tykkelsen på isen med en skistav, besluttes det at vende om. Men det er allerede for sent. Patruljeførerne, slæden og hundene går igennem isen. De er nu nødt til at etablere en landingsbane og vente på at blive evakueret af et fly.",
       "category": "station",
-      "imageUrl": "/images/danmarkshavn.jpg"
+      "media": [
+        {
+          "type": "image",
+          "url": "/images/alpefjord.webp"
+        }
+      ]
     }
   ]
 }
