@@ -39,11 +39,12 @@
 }
 
 .carousel-button {
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
   border: 2px solid var(--blue);
   background: transparent;
   color: var(--blue);
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -54,7 +55,7 @@
 }
 
 .carousel-indicator {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .carousel-image {

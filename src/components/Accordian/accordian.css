@@ -96,6 +96,7 @@
 
 .content-container {
   height: 0;
+  margin-top: 0.5rem;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   background-color: var(--backgroundGrey);
