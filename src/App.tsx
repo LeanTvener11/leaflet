@@ -2,8 +2,18 @@ import { MapContainer } from 'react-leaflet'
 import './App.css'
 import Map from './components/Map'
 import mapData from './components/mapData.json'
+import { LatLngBounds } from 'leaflet'
 
 const mobileBreakpoint = 768
+
+// Define the bounds for the draggable area
+// These coordinates represent a bounding box around Greenland
+const bounds = new LatLngBounds(
+  // Southwest corner (bottom-left)
+  [60, -80],
+  // Northeast corner (top-right)
+  [85, 60]
+)
 
 function App() {
   return (
@@ -33,7 +43,7 @@ function App() {
         }
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
-        dragging={false}
+        dragging={true} // Enable dragging
         minZoom={2}
         maxZoom={7}
         doubleClickZoom={false}
@@ -41,6 +51,8 @@ function App() {
         touchZoom={true}
         boxZoom={false}
         closePopupOnClick={false}
+        maxBounds={bounds} // Set the maximum bounds
+        maxBoundsViscosity={1.0} // Makes the bounds "solid" - 1.0 means the map cannot be dragged outside bounds at all
       >
         <Map />
       </MapContainer>
