@@ -101,20 +101,6 @@
       ]
     },
     {
-      "id": 4,
-      "name": "Lamberts Land",
-      "latitude": 79.18,
-      "longitude": -19.34,
-      "description": "En frostklar nat trænger et skær gennem teltdugen og vækker patruljeførerne. Udenfor danser nordlyset over himlen i grønne og lilla bånd, som flammer i vinden. Det ændrer sig uforudsigeligt, mens stilheden kun brydes af deres åndedræt og hundenes rolige bevægelser. Idet de falder i søvn igen, danser nordlysets stadig bag nethinden.",
-      "category": "park",
-      "media": [
-        {
-          "type": "image",
-          "url": "/images/nordlys.webp"
-        }
-      ]
-    },
-    {
       "id": 2,
       "name": "Jøkelbugten",
       "latitude": 78.05,
