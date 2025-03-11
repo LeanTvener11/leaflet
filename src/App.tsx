@@ -15,7 +15,7 @@ const bounds = new LatLngBounds(
   [85, 60]
 )
 const isMobile = window.innerWidth < 768
-
+console.log('gtag', window.gtag)
 function App() {
   return (
     <div
