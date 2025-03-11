@@ -15,11 +15,7 @@ const bounds = new LatLngBounds(
   [85, 60]
 )
 const isMobile = window.innerWidth < 768
-// @ts-expect-error gtag is not defined in the global scope
-if (window?.gtag && typeof window.gtag === 'function') {
-  // @ts-expect-error gtag is not defined in the global scope
-  console.log('gtag', window.gtag)
-}
+
 function App() {
   return (
     <div
