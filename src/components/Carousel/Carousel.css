@@ -39,6 +39,7 @@
 }
 
 .carousel-button {
+  display: flex;
   padding: 0.3rem 1rem;
   font-size: 1rem;
   border: 2px solid var(--blue);

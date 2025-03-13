@@ -118,7 +118,24 @@ const Carousel = ({ media, title }: CarouselProps) => {
           className="carousel-button prev"
           aria-label="Previous media"
         >
-          ←
+          <svg
+            style={{ transform: 'rotate(180deg)' }}
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 335 283.6"
+            width="22px"
+            height="22px"
+          >
+            <polygon
+              fill="currentColor"
+              points="215 144.2 140.2 219.1 159 237.9 252.6 144.2 159 50.6 140.2 69.3 215 144.2"
+            />
+            <polyline
+              fill="currentColor"
+              points="224.8 157.5 224.8 130.2 73 130.2 73.1 157.5"
+            />
+          </svg>
         </button>
         <span className="carousel-indicator">
           {currentMediaIndex + 1}/{media.length}
@@ -128,7 +145,23 @@ const Carousel = ({ media, title }: CarouselProps) => {
           className="carousel-button next"
           aria-label="Next media"
         >
-          →
+          <svg
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 335 283.6"
+            width="22px"
+            height="22px"
+          >
+            <polygon
+              fill="currentColor"
+              points="215 144.2 140.2 219.1 159 237.9 252.6 144.2 159 50.6 140.2 69.3 215 144.2"
+            />
+            <polyline
+              fill="currentColor"
+              points="224.8 157.5 224.8 130.2 73 130.2 73.1 157.5"
+            />
+          </svg>
         </button>
       </div>
     </div>
