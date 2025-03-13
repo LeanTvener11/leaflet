@@ -20,7 +20,7 @@ function App() {
   return (
     <div
       style={{
-        height: '700px',
+        height: 'calc(700px - 16px)',
         width: '100%',
         display: 'relative',
       }}
