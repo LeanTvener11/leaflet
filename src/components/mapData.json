@@ -17,8 +17,8 @@
     {
       "id": 1,
       "name": "Washington land",
-      "latitude": 80.58,
-      "longitude": -62.35,
+      "latitude": 81.02,
+      "longitude": -62.95,
       "description": "I ukendt terræn skal et patruljehold rekognoscere en gletsjer, der aldrig før er blevet passeret med hundeslæde – en risikabel opgave, da revner i isen kan være dækket af sne. Den stejle opstigning kræver, at de fragter lasten ad to omgange. Men på toppen breder en endeløs isørken sig, hvid så langt øjet rækker og et syn udover det sædvanlige.",
       "media": [
         {
@@ -34,11 +34,15 @@
     {
       "id": 8,
       "name": "Hall Land",
-      "latitude": 81.4,
-      "longitude": -49.56,
+      "latitude": 81.72,
+      "longitude": -60.47,
       "description": "Når lyset vender tilbage i den sene vinter, muliggør det indsættelse af slædehold til Nordøstgrønlands fjerneste egne med specialfly, der kan lande og lette på ski. Pladsen er trang, når hundeslæde, tretten hunde og to mand skal med grej til at kunne begå sig i flere måneder i det øde.",
       "category": "peninsula",
       "media": [
+        {
+          "type": "video",
+          "url": "1065366781"
+        },
         {
           "type": "image",
           "url": "/images/udflyvning1.webp"
@@ -53,10 +57,14 @@
     {
       "id": 9,
       "name": "Tvillum Elv",
-      "latitude": 82.33,
-      "longitude": -33.56,
+      "latitude": 82.51,
+      "longitude": -34.05,
       "description": "En frostklar morgen i Nordterrænet møder et slædehold et kobbel på elve ulve, som nysgerrigt følger slæden indtil deres opmærksomhed rettes mod en flok moskusokser i det fjerne. Ulvene omringer flokken og en kalv bliver let bytte idet panikken spreder sig. Mens ulvene jager, fortsætter slædeholdet hurtigt videre gennem den øde vildmark.​",
       "media": [
+        {
+          "type": "video",
+          "url": "1065369660"
+        },
         {
           "type": "image",
           "url": "/images/tvillum1.webp"
@@ -86,10 +94,14 @@
     {
       "id": 3,
       "name": "5. Maj Sø",
-      "latitude": 81.15,
-      "longitude": -24.48,
+      "latitude": 81.34,
+      "longitude": -25.25,
       "description": "Langt inde i en stenet og snæver canyon gemmer sig et 25 meter højt, lodret vandfald, som i maj måned er frosset til is. Ved hjælp af medbragt udstyr hejses slæden ned ad vandfaldet, mens hundene og patruljeførerne selv bevæger sig over klippevæggen og rundt om vandfaldet.",
       "media": [
+        {
+          "type": "video",
+          "url": "1065365985"
+        },
         {
           "type": "image",
           "url": "/images/nedfiring1.webp"
@@ -108,6 +120,10 @@
       "description": "Isbjerge driver ud og ind af Nordøstgrønlands fjorde i de få isfrie måneder, men i Jøkelbugten holdes de tilbage, hvilket skaber en tæt is-labyrint. Ved dårlig sigtbarhed er navigation næsten umulig, da isbjergene hverken fremgår på GPS eller kort.",
       "media": [
         {
+          "type": "video",
+          "url": "1065365771"
+        },
+        {
           "type": "image",
           "url": "/images/isbjergeJoekelbugten.webp"
         }
@@ -122,6 +138,10 @@
       "category": "bay",
       "media": [
         {
+          "type": "video",
+          "url": "1065366325"
+        },
+        {
           "type": "image",
           "url": "/images/sejlads.webp"
         }
@@ -130,8 +150,8 @@
     {
       "id": 5,
       "name": "Hansa Bugt",
-      "latitude": 74.38,
-      "longitude": -18.47,
+      "latitude": 74.61,
+      "longitude": -18.76,
       "description": "Under en søopmåling opdages et skibsvrag i Hansa Bugt, der sandsynligvis er det tyske skib Sachsen, der deltog i 2. verdenskrig med vejrmålinger over Nordøstgrønland. Efter at tyskerne blev opdaget af Slædepatruljen og deres hytter blev ødelagt af amerikanske bombefly i 1943, blev de evakueret. Men før de forlod området, borede de huller i skroget, så skibet sank, da isen smeltede.",
       "category": "glacier",
       "media": [
@@ -145,8 +165,8 @@
     {
       "id": 7,
       "name": "Alpefjord",
-      "latitude": 72.04,
-      "longitude": -25.3,
+      "latitude": 72.21,
+      "longitude": -25.45,
       "description": "En kold marts-morgen bevæger to patruljeførere sig ud på tynd is. Efter at have kontrolleret tykkelsen på isen med en skistav, besluttes det at vende om. Men det er allerede for sent. Patruljeførerne, slæden og hundene går igennem isen. De er nu nødt til at etablere en landingsbane og vente på at blive evakueret af et fly.",
       "category": "station",
       "media": [
