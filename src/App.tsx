@@ -20,7 +20,9 @@ function App() {
   return (
     <div
       style={{
-        height: 'calc(700px - 16px)',
+        aspectRatio: '105 / 197',
+        height: 'auto',
+        maxHeight: 'calc(700px - 16px)',
         width: '100%',
         display: 'relative',
       }}
