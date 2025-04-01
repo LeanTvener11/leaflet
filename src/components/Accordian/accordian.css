@@ -41,9 +41,6 @@
   background-color: #fff;
   z-index: 10;
   top: 16px;
-  @media (min-width: 768px) {
-    top: 30px;
-  }
 }
 .accordian-item-container::after {
   content: '';
@@ -70,14 +67,14 @@
 
 .accordian-headline {
   color: var(--blue);
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.3rem;
   font-family: verdana, geneva, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   @media (min-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     line-height: 1.4rem;
   }
 }

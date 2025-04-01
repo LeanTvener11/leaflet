@@ -10,9 +10,9 @@ const mobileBreakpoint = 768
 // These coordinates represent a bounding box around Greenland
 const bounds = new LatLngBounds(
   // Southwest corner (bottom-left)
-  [60, -80],
+  [55, -90],
   // Northeast corner (top-right)
-  [85, 60]
+  [90, 50]
 )
 const isMobile = window.innerWidth < 768
 
@@ -52,7 +52,7 @@ function App() {
         touchZoom={true}
         boxZoom={false}
         closePopupOnClick={false}
-        maxBounds={bounds} // Set the maximum bounds
+        maxBounds={isMobile ? undefined : bounds} // Set the maximum bounds
         maxBoundsViscosity={1.0} // Makes the bounds "solid" - 1.0 means the map cannot be dragged outside bounds at all
       >
         <Map />
