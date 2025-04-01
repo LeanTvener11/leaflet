@@ -5,6 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    allowedHosts: [
+      '.osc-fr1.scalingo.io',
+      '.forsvaret.dk',
+      '.karriere.forsvaret.dk',
+    ],
+    host: '0.0.0.0',
     port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
   },
   build: {
